@@ -11,8 +11,6 @@ main:
     sw x5, 2(x11)         # y[2] = S (at 0x208)
     li x5, 67
     sw x5, 3(x11)        # y[3] = C  (at 0x20C - termination element)
-    li x5, 86
-    sw x5, 4(x11)        # y[3] = V  
     sw x0, 5(x11)        # null byte termination (at 0x20C - termination element)
     # Call strcpy function
     jal x1, strcpy
